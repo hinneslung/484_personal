@@ -1,10 +1,10 @@
 (function() {
     var app = angular.module('storeCommon', []);
 
-	app.directive("storeHeader", function() {
+	app.directive("storeSkills", function() {
 		return {
 			restrict: 'E',
-			templateUrl: "../templates/header.html",
+			templateUrl: "../templates/skills.html",
 			scope: {
 				delegate: '='
 			},

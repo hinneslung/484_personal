@@ -339,7 +339,7 @@ jQuery.fn.spectragram.accessData={
 	clientID:'e659391279a64365a13bfb26b4caf15d'}
 	
 $('.instaFeed').spectragram('getUserFeed', {
-		query: 'nike', //Change the instagram feed user to display the feed that you want.
+		query: 'hinnes', //Change the instagram feed user to display the feed that you want.
 		size: 'large',
 		max: 10
 });
