@@ -52,7 +52,7 @@
                     <li><img src="images/profileImages/profileLarge.jpg" class="slide" alt=""/>
                         <div class="caption">
                             <h1>Hinnes Lung</h1>
-                            <p>Web Designer - Developer</p>
+                            <p>Student - Developer</p>
 
                         </div>
                     </li>
@@ -75,7 +75,8 @@
                             <ul>
                                 <li><a class="scroll" href="#wrapper">home</a></li>
                                 <li><a class="scroll" href="#about">about</a></li>
-                                <li><a class="scroll" href="#resume">resume</a></li>
+                                <li><a class="scroll" href="#experience">experience</a></li>
+                                <li><a class="scroll" href="#education">education</a></li>
 
                             </ul>
 
@@ -85,11 +86,9 @@
 
                     <div class="four columns headerSocials">
                         <ul>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a target="_blank" href="https://twitter.com/hinneslung"><i class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="http://www.facebook.com/hinneslung"><i class="fa fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/hinnes"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
 
@@ -97,8 +96,8 @@
                         <!--Navigation-->
                         <nav class="mainNav" >
                             <ul>
-                                <li><a class="scroll" href="#portfolio">Portfolio</a></li>
-                                <li><a class="scroll" href="#blog">BLog</a></li>
+                                <li><a class="scroll" href="#portfolio">portfolio</a></li>
+                                <li><a class="scroll" href="#activities">activities</a></li>
                                 <li><a class="scroll" href="#contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -113,7 +112,68 @@
 
         <store-about></store-about>
         <store-resume></store-resume>
-        <store-portfolio></store-portfolio>
+
+
+        <!--Portfolio section-->
+        <section id="portfolio">
+            <!--Title grey holder -->
+            <div class="tgreyHolder bgGrey ofsInTop">
+
+
+                <!--Big title-->
+                <div class="bigTitle tCenter">
+                    <h1>our portfolio</h1>
+                    <img src="images/star.png" alt="">
+                </div>
+                <!--End big title-->
+            </div>
+            <!--End title grey holder-->
+
+            <!--Container-->
+            <div class="container clearfix">
+
+                <!-- Filter nav -->
+                <div class="filterNav ofsInTop ofsInBottom">
+                    <ul id="category" class="filter">
+                        <li class="all current"><a href="#">All</a></li>
+                        <li class="catWeb"><a href="#"> Web Design</a></li>
+                        <li class="catGraphic"><a href="#">Graphic Design</a></li>
+                        <li class="catMotion"><a class="last" href="#">Motion Graphic</a></li>
+                    </ul>
+                </div>
+                <!-- End filter nav -->
+            </div>
+            <!--End container-->
+
+            <!--Container-->
+            <div class="container clearfix">
+                <!-- Works list -->
+                <div class=" works clearfix ">
+                    <!--Portfolio-->
+                    <ul class="portfolio clearfix tCenter">
+
+                        <li class="item one-third column " data-id="id-1" data-type="catWeb">
+                            <div class="itemDesc">
+
+                                <div class="itemDescInner">
+                                    <h3>Testy Raspberry<span> - web design</span></h3>
+                                    <div class=" itemBtn ">
+                                        <a  href="images/portfolioImages/w1.jpg" class=" folio"><i class="fa fa-expand"></i></a>
+                                        <a href="project.html"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="images/portfolioImages/w1.jpg" alt="">
+                        </li>
+
+                    </ul>
+                    <!--End portfolio-->
+                </div>
+                <!-- End works list -->
+            </div>
+            <!--End container-->
+        </section>
+        <!--End portfolio section-->
 
         <!--Call to action section-->
         <section id="clt" class="clt bgGreyDark tCenter  ofsBMedium">
