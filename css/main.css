@@ -37,12 +37,12 @@
 	-moz-animation-name:bounceG;
 	-moz-animation-duration:1.5s;
 	-moz-animation-iteration-count:infinite;
-	-moz-animation-direction:linear;
+	-moz-animation-direction:initial;
 	-moz-transform:scale(0.7);
 	-webkit-animation-name:bounceG;
 	-webkit-animation-duration:1.5s;
 	-webkit-animation-iteration-count:infinite;
-	-webkit-animation-direction:linear;
+	-webkit-animation-direction:initial;
 	-webkit-transform:scale(0.7);
 	-ms-animation-name:bounceG;
 	-ms-animation-duration:1.5s;
@@ -52,12 +52,12 @@
 	-o-animation-name:bounceG;
 	-o-animation-duration:1.5s;
 	-o-animation-iteration-count:infinite;
-	-o-animation-direction:linear;
+	-o-animation-direction:initial;
 	-o-transform:scale(0.7);
 	animation-name:bounceG;
 	animation-duration:1.5s;
 	animation-iteration-count:infinite;
-	animation-direction:linear;
+	animation-direction:initial;
 	transform:scale(0.7);
 }
 
@@ -749,33 +749,39 @@ h1.prfTitle span {
     position: absolute;
     top: -30px;
     z-index: 10;
-	text-transform:uppercase;
+}
+
+.percent95 {
+    width: 95%;
 }
 
 .percent90 {
     width: 90%;
 }
 
-
-.percent40 {
-    width: 50%;
+.percent85 {
+    width: 85%;
 }
 
-
-.percent50 {
-    width: 70%;
+.percent80 {
+	width: 80%;
 }
 
+.percent75 {
+    width: 75%;
+}
+
+.percent70 {
+	width: 70%;
+}
 
 .percent60 {
-    width: 60%;
+	width: 60%;
 }
 
-
-.percent95 {
-    width: 95%;
+.percent50 {
+	width: 50%;
 }
-
 
 .skillInner .intro{
 	padding-bottom:0;
@@ -1193,7 +1199,7 @@ ul#category li a {
 	max-width:400px;
 	line-height:32px;
 	margin-bottom:20px;
-	-webkit-text-stroke: 0;
+	-webkit-text-stroke: initial;
 	
 }
 
@@ -1247,7 +1253,7 @@ ul#category li a {
 .viewAll a{
 	text-transform:uppercase;
 	color:#8f9194;
-	-webkit-text-stroke: 0.25px;
+	-webkit-text-stroke: initial;
 }
 
 
@@ -1641,7 +1647,7 @@ ul#category li a {
 	padding: 0 15px 0 0;
 }
 
-.inputColumns  .column2 .columnInner, {
+.inputColumns  .column2 .columnInner {
 	padding: 0 5px 0 10px;
 }
 

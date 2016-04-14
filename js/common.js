@@ -53,10 +53,10 @@
 		};
 	});
 
-	app.directive("storeBlog", function() {
+	app.directive("storeActivities", function() {
 		return {
 			restrict: 'E',
-			templateUrl: "../templates/blog.html",
+			templateUrl: "../templates/activities.html",
 			scope: {
 				delegate: '='
 			},

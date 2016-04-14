@@ -1,7 +1,7 @@
 (function() {
     var app = angular.module('store',
         ['ngRoute', 'ngAnimate', 'ui.bootstrap',
-	        'storeCommon']
+	        'storeCommon', 'storeGallery']
     );
 
 	app.factory('apiService', apiService);

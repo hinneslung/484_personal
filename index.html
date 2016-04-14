@@ -86,10 +86,14 @@
 
                     <div class="four columns headerSocials">
                         <ul>
-                            <li><a target="_blank" href="https://twitter.com/hinneslung"><i class="fa fa-twitter"></i></a></li>
-                            <li><a target="_blank" href="http://www.facebook.com/hinneslung"><i class="fa fa-facebook"></i></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/in/hinnes"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a target="_blank" href="https://www.instagram.com/hinnes"><i class="fa fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="https://twitter.com/hinneslung">
+                                <i class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="http://www.facebook.com/hinneslung">
+                                <i class="fa fa-facebook"></i></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/hinnes">
+                                <i class="fa fa-linkedin"></i></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/hinnes">
+                                <i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
 
@@ -97,8 +101,8 @@
                         <!--Navigation-->
                         <nav class="mainNav" >
                             <ul>
-                                <li><a class="scroll" href="#portfolio">portfolio</a></li>
                                 <li><a class="scroll" href="#activities">activities</a></li>
+                                <li><a class="scroll" href="#gallery">gallery</a></li>
                                 <li><a class="scroll" href="#contact">Contact</a></li>
                             </ul>
                         </nav>
@@ -112,69 +116,9 @@
         <!--End header-->
 
         <store-about></store-about>
+
         <store-resume></store-resume>
 
-
-        <!--Portfolio section-->
-        <section id="portfolio">
-            <!--Title grey holder -->
-            <div class="tgreyHolder bgGrey ofsInTop">
-
-
-                <!--Big title-->
-                <div class="bigTitle tCenter">
-                    <h1>our portfolio</h1>
-                    <img src="images/star.png" alt="">
-                </div>
-                <!--End big title-->
-            </div>
-            <!--End title grey holder-->
-
-            <!--Container-->
-            <div class="container clearfix">
-
-                <!-- Filter nav -->
-                <div class="filterNav ofsInTop ofsInBottom">
-                    <ul id="category" class="filter">
-                        <li class="all current"><a href="#">All</a></li>
-                        <li class="catWeb"><a href="#"> Web Design</a></li>
-                        <li class="catGraphic"><a href="#">Graphic Design</a></li>
-                        <li class="catMotion"><a class="last" href="#">Motion Graphic</a></li>
-                    </ul>
-                </div>
-                <!-- End filter nav -->
-            </div>
-            <!--End container-->
-
-            <!--Container-->
-            <div class="container clearfix">
-                <!-- Works list -->
-                <div class=" works clearfix ">
-                    <!--Portfolio-->
-                    <ul class="portfolio clearfix tCenter">
-
-                        <li class="item one-third column " data-id="id-1" data-type="catWeb">
-                            <div class="itemDesc">
-
-                                <div class="itemDescInner">
-                                    <h3>Testy Raspberry<span> - web design</span></h3>
-                                    <div class=" itemBtn ">
-                                        <a  href="images/portfolioImages/w1.jpg" class=" folio"><i class="fa fa-expand"></i></a>
-                                        <a href="project.html"><i class="fa fa-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="images/portfolioImages/w1.jpg" alt="">
-                        </li>
-
-                    </ul>
-                    <!--End portfolio-->
-                </div>
-                <!-- End works list -->
-            </div>
-            <!--End container-->
-        </section>
-        <!--End portfolio section-->
 
         <!--Call to action section-->
         <section id="clt" class="clt bgGreyDark tCenter  ofsBMedium">
@@ -191,7 +135,80 @@
         </section>
         <!--End call to action section-->
 
-        <store-blog></store-blog>
+        <store-activities></store-activities>
+
+        <!--Call to action section-->
+        <section class="clt bgGreyDark tCenter  ofsBMedium">
+            <div class="container clearfix">
+            </div>
+        </section>
+        <!--End call to action section-->
+
+        <!--Portfolio section-->
+        <section id="gallery" ng-controller="GalleryController">
+            <!--Title grey holder -->
+            <div class="tgreyHolder bgGrey ofsInTop">
+
+
+                <!--Big title-->
+                <div class="bigTitle tCenter">
+                    <h1>My gallery</h1>
+                    <img src="images/star.png" alt="">
+                </div>
+                <!--End big title-->
+            </div>
+            <!--End title grey holder-->
+
+            <!--Container-->
+            <div class="container clearfix">
+
+                <!-- Filter nav -->
+                <div class="filterNav ofsInTop ofsInBottom">
+                    <ul id="category" class="filter">
+                        <li class="all current"><a href="#">All</a></li>
+                        <li ng-repeat="cat in categories" class="{{cat.id}}"><a href="#">{{cat.title}}</a></li>
+                    </ul>
+                </div>
+                <!-- End filter nav -->
+            </div>
+            <!--End container-->
+
+            <!--Container-->
+            <div class="container clearfix">
+                <!-- Works list -->
+                <div class=" works clearfix ">
+                    <!--Portfolio-->
+                    <ul class="portfolio clearfix tCenter">
+
+                        <span ng-repeat="(index, cat) in categories">
+                            <li class="item one-third column " data-id="id-{{index*100+$index}}" data-type="{{cat.id}}"
+                                ng-repeat="p in cat.pictures">
+                                <div class="itemDesc">
+
+                                    <div class="itemDescInner">
+                                        <h3>{{ cat.title }} <br><span> {{ p }} </span></h3>
+                                        <div class=" itemBtn ">
+                                            <div class=" itemBtn ">
+                                                <a href="images/gallery/{{index}}/{{$index}}.jpg" class="folio">
+                                                    <i class="fa fa-expand"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="images/gallery/{{index}}/{{$index}}.jpg" alt="">
+                            </li>
+                        </span>
+
+                    </ul>
+                    <!--End portfolio-->
+                </div>
+                <!-- End works list -->
+            </div>
+            <!--End container-->
+        </section>
+        <!--End portfolio section-->
+
         <store-contact></store-contact>
 
         <store-footer></store-footer>
@@ -209,6 +226,7 @@
 
     <script src="js/services/api.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/gallery.js"></script>
 
     <script src="js/app.js"></script>
 
