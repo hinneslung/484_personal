@@ -28,7 +28,7 @@
 					"Looking through Tunnel View @Yosemite Valley",
 					"The red-in-color Golden Gate Bridge",
 					"Statue of Three Lies - visiting my friend in Boston",
-					"5"]
+					"Blocking the Ducklings"]
 			}
 		];
 

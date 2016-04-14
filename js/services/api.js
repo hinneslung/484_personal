@@ -1,22 +1,22 @@
 function apiService($http, $rootScope) {
 
-	var apiUrl = "http://45.115.39.208/api/";
+	var apiUrl = "http://hinnes.me/personal/contact";
 
 	var api = {apiUrl : apiUrl};
 
 
-    //-----------------------------------------------------------------------------Media
-	api.getMedia = function() {
-		return $http.get(apiUrl + 'media');
+    // api.getMedia = function() {
+		// return $http.get(apiUrl + 'media');
+    // };
+    //
+    // api.getMediaById = function(id) {
+		// return $http.get(apiUrl + 'media/' + id);
+    // };
+    //
+	
+	api.submitContact = function(email, name, content) {
+		return $http.post(apiUrl,  {email: email, name: name, content: content});
 	};
-
-	api.getMediaById = function(id) {
-		return $http.get(apiUrl + 'media/' + id);
-	};
-	api.updateProduct = function(id, name, price) {
-		return $http.post(apiUrl + 'media', {id:id, name:name, price:price});
-	};
-
 
 	return api;
 }

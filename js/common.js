@@ -74,7 +74,22 @@
 				delegate: '='
 			},
 			controller: function($window, $rootScope, $scope, $location, apiService) {
+				$scope.email = "";
+				$scope.name = "";
+				$scope.content = "";
 
+				$scope.sent = false;
+
+				$scope.submit = function() {
+					apiService.submitContact($scope.email, $scope.name, $scope.content).success(function(res){
+						console.log(res);
+						$scope.email = "";
+						$scope.name = "";
+						$scope.content = "";
+
+						$scope.sent = true;
+					});
+				}
 			}
 		};
 	});
