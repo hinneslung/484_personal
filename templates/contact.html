@@ -12,7 +12,7 @@
     <div class="container clearfix">
 
         <div class="smallIntro margBottom tCenter">
-            <p>Wish to say hello?<br>Feel free to get in touch.
+            <p>Wish to say hello?<br>Feel free to get in touch. (Use real email please)
             </p>
         </div>
 
@@ -43,7 +43,7 @@
                             <!--Column-->
                             <div class="column2">
                                 <div class="columnInner">
-                                    <input type="text" placeholder="Email *" ng-model="email" required>
+                                    <input type="email" placeholder="Email *" ng-model="email" required>
                                 </div>
                             </div>
                             <!--End column-->
@@ -83,6 +83,10 @@
     }
 
     input.ng-valid.ng-touched {
-        border-color: #78FA89;
+        border-color: #3eafab;
+    }
+
+    textarea.ng-valid.ng-touched {
+        border-color: #3eafab;
     }
 </style>

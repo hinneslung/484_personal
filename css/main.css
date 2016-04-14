@@ -1651,7 +1651,7 @@ ul#category li a {
 	padding: 0 5px 0 10px;
 }
 
-.contactForm input[type="text"], .contactForm textarea, .replyForm input[type="text"], .replyForm textarea {
+.contactForm input[type="text"], input[type=email], .contactForm textarea, .replyForm input[type="text"], .replyForm textarea {
     background: #ffffff;
     border: 0 none;
     color: #666666;
