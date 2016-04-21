@@ -1,6 +1,6 @@
 function apiService($http, $rootScope) {
 
-	var apiUrl = "http://hinnes.me/personal/contact";
+	var apiUrl = "/personal/contact";
 
 	var api = {apiUrl : apiUrl};
 
