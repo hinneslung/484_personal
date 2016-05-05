@@ -126,8 +126,8 @@
             <div class="container clearfix">
                 <!--Clt inner-->
                 <div class="cltInner">
-                    <h1>iam currently accepting new project from new clients </h1>
-                    <a href="#" class="btn ">Request a quote</a>
+                    <h1>Get in touch with me</h1>
+                    <a class="scroll btn" href="#contact">Contact</a>
                 </div>
                 <!--End clt inner-->
             </div>
@@ -196,7 +196,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="images/gallery/{{index}}/{{$index}}.jpg" alt="">
+                                <img src="images/gallery/{{index}}/{{$index}}.jpg" class="galleryImg">
                             </li>
                         </span>
 
@@ -245,4 +245,17 @@
     <script src="js/bounce/script.js" type="text/javascript"></script>
 
 </body>
+
+<style>
+    .galleryImg {
+        //display: block;
+        max-height:100%;
+        max-width:100%;
+    }
+
+    a {
+        color: dimgray;
+    }
+</style>
+
 </html>
